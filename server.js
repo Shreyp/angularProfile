@@ -5,6 +5,7 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 var logger = require('morgan');
+var mongoose = require('mongoose');
 
 //config files
 var db = require('./config/db');
@@ -16,7 +17,7 @@ app.use(logger('dev'));
 var PORT = process.env.PORT || 7900;
 
 //connect to mongoDB (uncomment when db.js setup)
-//mongoose.connect(db.url);
+mongoose.connect(db.url);
 
 //set the static file location
 app.use(express.static(__dirname + '/public'));

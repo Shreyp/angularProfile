@@ -1,0 +1,11 @@
+{
+  "name": "angular-profile",
+  "version": "1.0.0",
+  "dependencies":{
+    "bootstrap": "latest",
+    "font-awesome": "latest",
+    "animate.css": "latest",
+    "angular": "latest",
+    "angular-ui-router": "0.2.18"
+  }
+}
