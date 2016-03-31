@@ -22,6 +22,10 @@ mongoose.connect(db.url);
 //set the static file location
 app.use(express.static(__dirname + '/public'));
 
+app.get('*', function(req, res){
+  res.sendFile(process.cwd() +'/public/index.html');
+});
+
 
 // start app ================================
 app.listen(PORT, function() {
