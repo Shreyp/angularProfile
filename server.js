@@ -28,9 +28,9 @@ app.get('*', function(req, res){
 
 
 // start app ================================
-app.listen(PORT, function() {
-  console.log("Check out ", PORT);
-});
+// app.listen(PORT, function() {
+//   console.log("Check out ", PORT);
+// });
 
-//export app
-exports = module.exports = app;
+// //export app
+// exports = module.exports = app;
