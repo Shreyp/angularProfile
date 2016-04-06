@@ -13,10 +13,6 @@
   },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Shreyp/angularProfile/issues"
-  },
-  "homepage": "https://github.com/Shreyp/angularProfile#readme",
   "dependencies": {
     "body-parser": "^1.15.0",
     "express": "^4.13.4",

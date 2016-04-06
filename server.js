@@ -27,7 +27,7 @@ app.get('*', function(req, res){
 });
 
 
-// start app ================================
+start app ================================
 app.listen(PORT, function() {
   console.log("Check out ", PORT);
 });
