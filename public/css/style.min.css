@@ -96,7 +96,7 @@ a:focus {
     margin: 0 auto;
     text-align: center;
     width: 100%;
-    max-width: 1920px;
+    max-width: 100%;
     position: relative;
     min-height: 100%;
     background-position: 50% 0;
@@ -310,7 +310,8 @@ section {
     margin-bottom: 25px
 }
 #mywork {
-    background: #fff
+    background: #fff;
+    min-height: 500px !important;
 }
 .portfolio-grid .thumbnail {
     margin-bottom: 30px;

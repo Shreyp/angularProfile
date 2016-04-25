@@ -20,74 +20,58 @@
   <link rel="stylesheet" type="text/css" href="/css/home.css">
   <base href="/" />
 
-        </head>
+</head>
 
-        <body>
-          <!-- Preloader -->
-          <div id="preloader">
-            <div id="status">&nbsp;</div>
-          </div>
+<body>
+  <!-- Preloader -->
+  <div id="preloader">
+    <div id="status">&nbsp;</div>
+  </div>
 
-          <!-- Fixed navbar -->
-          <div class="navbar main-menu navbar-default navbar-fixed-top" role="navigation">
-            <div class="container">
-              <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-                <a class="navbar-brand" href="" title="Shreyans Patel"><img src="/images/logo.jpg" alt="logo" title="Shreyans Patel" /></a>
-              </div>
-              <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav navbar-right" id="menu">
-                  <li><a data-scroll data-options="easing: easeOutQuart" href="#banner">Home</a></li>
-                  <li><a data-scroll data-options="easing: easeOutQuart" href="#mywork">My Work</a></li>
-                  <li><a data-scroll data-options="easing: easeOutQuart" href="#about">About</a></li>
-                  <li><a data-scroll data-options="easing: easeOutQuart" href="#skills">Skills</a></li>
-                  <li><a data-scroll data-options="easing: easeOutQuart" href="#contact">Contact</a></li>
-                </ul>
-              </div>
-              <!--/.nav-collapse -->
-            </div>
-          </div>
 
-          <ui-view></ui-view>
+  <div ng-include="'/views/partial-navbar.html'"></div>
+  <ui-view></ui-view>
 
-    
-    <!-- Placed at the end of the document so the pages load faster -->
 
-    <!-- Jquery v:2.2.2 -->
-    <script src="/libs/jquery/dist/jquery.min.js"></script>
+  <!-- Placed at the end of the document so the pages load faster -->
 
-    <!-- Angular v: 1.5.3 -->
-    <script src="/libs/angular/angular.min.js"></script>
+  <!-- Jquery v:2.2.2 -->
+  <script src="https://code.jquery.com/jquery-1.12.3.min.js" integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ=" crossorigin="anonymous"></script>
 
-    <!-- Angular UI-Router -->
-    <script src="/libs/angular-ui-router/release/angular-ui-router.min.js"></script>
+  <!-- Angular v: 1.5.3 -->
+  <script src="/libs/angular/angular.min.js"></script>
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+  <!-- Angular UI-Router -->
+  <script src="/libs/angular-ui-router/release/angular-ui-router.min.js"></script>
 
-    <!-- app.js -->
-    <script src="/js/app.js"></script>
+  <script src="/js/app.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script src="/libs/bootstrap/dist/js/bootstrap.min.js"></script>
 
-    <!-- smooth scrolling -->
-    <script src="/js/custom/smooth-scroll.js"></script>
+  <!-- smooth scrolling -->
+  <script src="/js/custom/smooth-scroll.js"></script>
 
-    <!-- animation scrolling -->
-    <script src="/js/custom/wow.min.js"></script>
+  <!-- animation scrolling -->
+  <script src="/js/custom/wow.min.js"></script>
 
-    <!-- hover captions -->
-    <script src="/js/custom/jquery.hcaptions.js"></script>
+  <!-- hover captions -->
+  <script src="/js/custom/jquery.hcaptions.js"></script>
 
-    <!-- hover detail page -->
-    <script src="/js/custom/nivo-lightbox.min.js"></script>
+  <!-- hover detail page -->
+  <script src="/js/custom/nivo-lightbox.min.js"></script>
 
-    <!-- Form Validation -->
-    <script src="/js/custom/bootstrapValidator.min.js"></script>
+  <!-- Form Validation -->
+  <script src="/js/custom/bootstrapValidator.min.js"></script>
 
-    <!-- animation scrolling -->
-    <script src="/js/custom/app.min.js"></script>
+  <!-- animation scrolling -->
+  <script src="/js/custom/app.min.js"></script>
 
-    <!-- my script -->
-    <script src="/js/custom/home.js"></script>
-  </body>
+  <!-- my script -->
+  <script src="/js/custom/home.js"></script>
 
-  </html>
+  <!-- Controllers -->
+  <script src="/js/controllers/homeController.js"></script>
+
+</body>
+
+</html>
