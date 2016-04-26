@@ -8,6 +8,6 @@
   padding-top: 20px;
 }
 
-.modal-backdrop {
-  z-index: -1;
+body.modal-open{
+  padding-right:0 !important;
 }
