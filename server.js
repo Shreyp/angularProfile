@@ -64,6 +64,3 @@ app.post('/submitMessage', function(req, res){
 app.listen(PORT, function() {
   console.log("Check out ", PORT);
 });
-
-//export app
-exports = module.exports = app; //expose our app
