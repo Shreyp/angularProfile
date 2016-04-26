@@ -1,0 +1,13 @@
+.skillContainerR {
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.skillContainerB {
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.modal-backdrop {
+  z-index: -1;
+}
