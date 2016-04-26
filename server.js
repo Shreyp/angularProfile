@@ -17,8 +17,19 @@ app.use(logger('dev'));
 var PORT = process.env.PORT || 7900;
 
 //connect to mongoDB
-mongoose.connect(db.url);
+var mongoose = require('mongoose');
+var db = require('./config/db.js');
 
+// HEROKU DB
+if(process.env.NODE_ENV === 'production'){
+console.log(process.env.MONGOLAB_URI);
+mongoose.connect(db.url); // connect to our database
+}
+else {
+  // LOCAL DB
+  console.log("connected locally");
+  mongoose.connect('mongodb://localhost/profileContact');
+}
 
 //set the static file location
 app.use(express.static(__dirname + '/public'));
