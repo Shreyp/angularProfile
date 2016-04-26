@@ -46,6 +46,15 @@ app.use(bodyParser.urlencoded({
 
 //Database Calls ===========================
 
+var db = mongoose.connection;
+
+db.on('error', function(err) {
+  console.log('Mongoose Error: ', err);
+});
+db.once('open', function() {
+  console.log('Mongoose connection successful.');
+});
+
 var Message = require('./server/models/messageModel.js');
 
 app.post('/submitMessage', function(req, res){
