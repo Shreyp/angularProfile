@@ -44,6 +44,22 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 
+//Database Calls ===========================
+
+var Message = require('./server/models/messageModel.js');
+
+app.post('/submitMessage', function(req, res){
+  var message = new Message({
+    name: req.body.name,
+    email: req.body.email,
+    message: req.body.message
+  });
+  message.save(function(err){
+    if(err) res.send(err);
+    return res.send();
+  });
+});
+
 //start app ================================
 app.listen(PORT, function() {
   console.log("Check out ", PORT);
