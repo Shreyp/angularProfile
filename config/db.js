@@ -1,4 +1,4 @@
-  // config/db.js
-  module.exports = {
-    url: 'mongodb://localhost/sp-profile'
-  }
+require('dotenv').config();
+module.exports = {
+  url: process.env.MONGOLAB_URI
+};
