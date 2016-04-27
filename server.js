@@ -7,9 +7,6 @@ var bodyParser = require('body-parser');
 var logger = require('morgan');
 var mongoose = require('mongoose');
 
-//config files
-var db = require('./config/db');
-
 //setup logger
 app.use(logger('dev'));
 
@@ -18,7 +15,7 @@ var PORT = process.env.PORT || 7900;
 
 //connect to mongoDB
 var mongoose = require('mongoose');
-var db = require('./config/db.js');
+var db = require('./config/config.js');
 
 // HEROKU DB
 if(process.env.NODE_ENV === 'production'){
@@ -46,14 +43,14 @@ app.use(bodyParser.urlencoded({
 
 //Database Calls ===========================
 
-var db = mongoose.connection;
+// var db = mongoose.connection;
 
-db.on('error', function(err) {
-  console.log('Mongoose Error: ', err);
-});
-db.once('open', function() {
-  console.log('Mongoose connection successful.');
-});
+// db.on('error', function(err) {
+//   console.log('Mongoose Error: ', err);
+// });
+// db.once('open', function() {
+//   console.log('Mongoose connection successful.');
+// });
 
 var Message = require('./server/models/messageModel.js');
 
