@@ -3,6 +3,7 @@
 // modules ===================================
 var express = require('express');
 var app = express();
+var http = require('http').Server(app);
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 
@@ -73,6 +74,6 @@ app.post('/submitMessage', function(req, res){
 });
 
 //start app ================================
-app.listen(PORT, function() {
-  console.log("Check out ", PORT);
+http.listen(PORT, function(){
+  console.log("Checkout " + PORT);
 });

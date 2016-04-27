@@ -6,7 +6,6 @@ angular.module('profileApp').controller('homeController', ['$scope','$http','$lo
       email: $scope.email,
       message: $scope.message
     };
-    console.log(newMessage);
     $http.post('/submitMessage', newMessage).then(function(){
       $scope.name = '';
       $scope.email = '';
