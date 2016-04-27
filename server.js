@@ -4,11 +4,11 @@
 var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
-var logger = require('morgan');
 var mongoose = require('mongoose');
 
-//setup logger
-app.use(logger('dev'));
+//Body Parser Setup
+var bodyParser = require('body-parser');
+app.use(bodyParser.json());
 
 //port setup
 var PORT = process.env.PORT || 7900;
@@ -19,7 +19,7 @@ var db = require('./config/config.js');
 
 // HEROKU DB
 if(process.env.NODE_ENV === 'production'){
-console.log(process.env.MONGOLAB_URI);
+  console.log(process.env.MONGOLAB_URI);
 mongoose.connect(db.url); // connect to our database
 }
 else {
@@ -28,6 +28,21 @@ else {
   mongoose.connect('mongodb://localhost/profileContact');
 }
 
+var db = mongoose.connection;
+
+db.on('error', function(err) {
+  console.log('Mongoose Error: ', err);
+});
+db.once('open', function() {
+  console.log('Mongoose connection successful.');
+});
+
+var Message = require('./server/models/messageModel.js');
+
+//setup logger
+var logger = require('morgan');
+app.use(logger('dev'));
+
 //set the static file location
 app.use(express.static(__dirname + '/public'));
 
@@ -35,24 +50,7 @@ app.get('*', function(req, res){
   res.sendFile(process.cwd() +'/public/index.html');
 });
 
-//middleware
-app.use(bodyParser.json()); //get information from html forms
-app.use(bodyParser.urlencoded({
-  extended: true
-}));
-
 //Database Calls ===========================
-
-// var db = mongoose.connection;
-
-// db.on('error', function(err) {
-//   console.log('Mongoose Error: ', err);
-// });
-// db.once('open', function() {
-//   console.log('Mongoose connection successful.');
-// });
-
-var Message = require('./server/models/messageModel.js');
 
 app.post('/submitMessage', function(req, res){
   var message = new Message({
