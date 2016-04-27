@@ -15,3 +15,7 @@ body.modal-open{
 .navbar-brand {
   padding: 0px;
 }
+
+#emailLink {
+  color: white;
+}
