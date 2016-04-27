@@ -217,7 +217,7 @@ a:focus {
     color: #ef6348
 }
 .main-menu.floating-menu {
-    background: #000000
+    background: rgba(0, 0, 0, 0.7);
 }
 .main-menu.floating-menu .navbar-nav>li>a {
     color: #fff
